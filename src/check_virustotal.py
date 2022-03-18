@@ -23,9 +23,9 @@ def virustotal(filename, api_key):  # ("info", result[])
     elif response_code_ == -2:
         pass
     else:
-        if input("Would you like to upload file to VirusTotal? [Y/n] ") is not "n":
+        if input("Would you like to upload file to VirusTotal? [Y/n] ") != "n":
             response = vt.scan_file(filename)
             result.append(response["results"]["permalink"])
         else:
             print()
-    return ("scan_result", result) if response_code_ is 1 else ("permalink", result)
+    return ("scan_result", result) if response_code_ == 1 else ("permalink", result)

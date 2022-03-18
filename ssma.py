@@ -317,7 +317,7 @@ if __name__ == '__main__':
                 print(colors.BOLD + "VirusTotal link: " + colors.RESET, virus_check[1][0])
                 print()
                 print("================================================================================")
-                if input("Continue? [Y/n] ") is 'n':
+                if input("Continue? [Y/n] ") == 'n':
                     exit()
                 print()
     elif args.api_key and not internet_connection:
@@ -390,7 +390,7 @@ if __name__ == '__main__':
             "Email": strings[2]
         }
         file_report.domains(strings_result)
-
+#
     if filetype == 'application/x-dosexec' or filetype == 'application/x-executable' or args.document:
         if args.report == "output":
             pass
